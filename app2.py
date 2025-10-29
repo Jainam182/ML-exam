@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import io
@@ -13,7 +14,7 @@ st.set_page_config(
 
 # GROQ API KEY - Replace with your actual API key
 # Example: GROQ_API_KEY = "gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-GROQ_API_KEY = "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"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "your_groq_api_key_here")
 
 # Verify API key is set
 if not GROQ_API_KEY:
